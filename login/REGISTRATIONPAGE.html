@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+</head>
+<style>
+    body{
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        
+    }
+    .registration-container {
+            background-color:gray;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .a{
+        border-radius: 15px;
+        justify-content: center;
+        width: 90%;
+        padding: 10px;
+    }
+    label{
+        color: rgba(255, 255, 255, 0.8);
+            text-transform:uppercase ;
+            font-size: 17px;
+            letter-spacing: 2px;
+            padding-left: 10px;
+            font-weight: bold;
+    }
+    input{
+        background: whitesmoke;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 20px;
+            padding: 0px 20px;
+            border:none;
+            margin-bottom: 20px;
+            color: white;
+    }
+    .e input{
+       background-color:blue;
+    }
+</style>
+<body>
+        <div class="registration-container">
+           <center><h2>Registration</h2></center>
+            <form id="registration-form">
+                <div class="a">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div><br>
+                <div class="b">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div><br>
+                <div class="c">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div><br>
+                <div class="d">
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address" rows="4" required></textarea>
+                </div><br>
+                <div class="e">
+                   <center><input type="submit" value="Register"></center>
+                </div>
+            </form>
+        </div>
+    
+        <script>
+            document.getElementById('registration-form').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent form submission
+                
+                // Fetch registration data from form
+                var name = document.getElementById('name').value;
+                var email = document.getElementById('email').value;
+                var password = document.getElementById('password').value;
+                var address = document.getElementById('address').value;
+                
+                // Here you can perform further validation or send the data to your server for registration
+                
+                // For demonstration, let's just log the entered data
+                console.log('Name:', name);
+                console.log('Email:', email);
+                console.log('Password:', password);
+                console.log('Address:', address);
+            });
+        </script>
+</body>
+</html>
